@@ -50,11 +50,18 @@
     
 }
 
-/* .banner.scrolled #image1{
-    width: 80%;
-    opacity: 0;
-    -ms-zoom-animation: initial;
-} */
+.banner button{
+    background: #080051;
+    color: aliceblue;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.banner button:hover{
+    transform: scale(102%);
+}
 .banner h1{
     font-size: 50px;
     font-weight: 800px;
@@ -67,4 +74,14 @@
 
 footer li a{
     text-decoration: none;
+}
+
+.news1{
+    margin-top: 20px;
+}
+
+.news1 input{
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
 }
