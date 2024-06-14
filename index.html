@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granarl</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUBorTlClvBLFlw2MUj3rreDXoN8XAnL3B0g&s" type="image/x-icon">
+
+    <!-- style -->
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+    <!-- navbar -->
+    <nav class="navbar bg-body-light">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn bg-light" type="submit">
+                <img width="33px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADpCAMAAABx2AnXAAAAwFBMVEUxmc7///8REiQrg7IOAAsumM4AAAANDiEflMwAABcAABwAABoYkssjlcwrl87V5/EAABX4/Pyy1egHCR8AABNBoNDy+PrN4u+t0eeUlJpycnphYWqCgolusdfG3+6byONUp9OOwt/n8vhustecnKAvMD3V1dlBQUwAAB8eHy6Wlp4AAA6MjJV5eIJRUVwnKDaEvd1frNaky+Xe7fU0M0BKSlSqq65NUFnr6+vDxcje3uHCwsQiIjGur7RbW2RqanPCPagTAAAIfElEQVR4nO2cCXuqOBSGkZlg1IAL4oJU3BksVnFp53Za+f//alDbmqD0CvGW6HPe53bVcvORnCXLQZIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgTIE3F5ANVRSj8TdZN4gephBgP/WWtWy6Xm93asv9ghPJuXJlGVN9uNnIRGk27p2LtVvsNYWnYPRH1Ja72IOFbVIZIrxWr6sCgZZBbk4Zwr/u9qgPd3k31WthbzUtk7aUZOOvmXowqtS6VtaOlqlm3+DLIw29sK8rAJ1m3+QIQqiWTtaMmvqVhY5VcVy5XNgQfjsSvnm95ddXshjRXMa83fKF9CFmc09S0fXWXJYb/wpRReliWzxnhUGBlpH+qqjuUIpmhphJp0T3tuYWwoxGf6GrYBlEldOoZVGLYJ922ELTP1Og4bPRJvLdDWD2RNhSxzxAeRprZkvD3+TuWopHBF3A6gwzWagb+BbEpGssbhnjC1AHTxFo43brkr1Q2V14JZ2aYHVX9C+cjCBGbHb+CKVNZA0vi3yKxzxfLgSDGVh4S3XZW2UAoKyPMQBwmTNbZ+LcUp8uQ1qNbZieehJAl/fcCeUZCz5drKSZXzAW6wszOkE/bSKoYq9HBQpguY2JR76L4FQGhB84+/xMgg2pUK2Wj6DhYFaTL6DY10q7uIkRlZEshojTCVJP6qZuEqQxEjFhGJx0NnltNxXg/jaFeG0K5jj5HcKWDWU2IIE3daa72UPOehgB+UaOCGF9opaO0AH4RUyNoyGUa9NICz5i+EtR9bvBe61p9fx2OJlbmDD/kuIg8yDyS0WmHzdka9bhJk33yQSd5D5yN0aiI6GctTO1f7y7TvZ/5sjA+Dp8Gd1u0YyTjHdbcUBnwgNuTUUt4ma9WUQlVk19Y+etimc/J8DGMdblvMiUs80CGr9kWKtjzdz8n9yuseUVhV71LvG05Oo8yv/M45lS1rL3i3bp79Thr4U7uJfR1reznLdQkqtrjvBaTUmW96kGvAg85c0V6ppn5cg59lzmXAxGVd1azP31KrbpzTzSPl+J3RNyozWvdZrrzM08V2RXcIdeVqKkdx4ry1aCX3/jyIGrJI2dcq3npQfQ5CK4LUduiApgYu9myTN8gRF+nlXV43kEv53AlH9SmTardw6tDqMX79KGMPniwEuNIFZUupl+pYrZFM08U9yCmTWnnUfSOBH82fSWY4yvpTsAyZx3T7mNfHdpRpzuZx54JzD5P/IDx1LlmCgOhY3P2c8wjiHbVKUYSc2MESOyPYObQYdLDVIQphREgTaTAzPnSfhJlkaOYZSFc/RfMcapkqRVmS5cy3xiLwJ5YvHz1DEUOBYs1EMPh1M+xlC+rd8MGe0Y683VSFqSellZVF78/nq7hSA3CSiSPGIYxo3yia3f3e+T7JJ30In9XNYTI6j8hflyFX+2bgmBETuokcj2RPKJ2WqpDS/PxucoCRFT/pOq2KtTJdO2MeTGs7B4mGO0fMHD4hDH27dO6wKpQpXFIO2teLIOu7UufD1GQfPtsOXtVqHGIY83rlMZgtRrEvn0lVJHm2crFVNTOFM9lBiJn67gH/eS6EiWXfxoknTevHklaMRxmKQL1F+6dt5cF3iVYCWrXGwuhuosszhc0H2aZ+OKnDVRtSSSvEWNeuVzzY1AhLC1jSrmZ3rKRSKNQ0qSYp1oMvpJYDRFt8ZsYV14I9lwI3BvENJVNYlXcs2O1lW0DiyVLwsO4QXaypohULA1b5cj7q+XWgySaqtB67POqdgsCp/ku0jS8e37Twl62aq3W0l74BiFYE8my9kSn8hTd+D5ASFXVMPkNP6si5RhHolN5inQVcYJAYs1LtNlvMkiseSUtERYKpH7zTKbkpbTigL/RJdiyWSLUb8aheM8+SEK8ruwLNjjA3+TrQi0vJQXHT7GEmv8mhdmOZRHgQBcHTGk5Q1moGVVitOijfj5JXdItCLE9JtQ6ZxqM81miqA/JuhxyNq0X6OhCWvDyjK4bdxx7kHrGcdzyFOyL6LZqTpRjhdyc7ITdvuM4gCJHHu5Fl7TbNjq6xlXvfnTtngC82D8yfNAd3oXfoMAqMoyw7+7DbbAgMVcGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOCUv+4U6e87RZLvFBB2a3wIy398yNRXWdZ1Oa8ffwpf0o8vCs5BWN4JJczdw/frz9cK221l7Hwp2+j5+XZ9K8oOwopBp1TwCvWCXKgrnqvX6yW9rjyHmCOlrii6rijjiaKsvaNOwfnoMderu9asbSmztmlNx+3pbDN6eX1RlODfbXsymTuTyeaXE3796R7T97aQz+//26K8v61H8zhYUF4uhr8q6uHnQvg9LUyut+UgMAumGSiK9Y8nK6a5fXQmr1bQnk+Uzvt/jjL/d1LS8z+sq2Q9WiW5MB7PdVeXLdPR3XzRtSpu3nVlNz8PJQaBp0zfRhuzY1rjd3dmFWhhpc7W2047wczRK54+eqwE1kZ/VIqvVnvzrqzffz3WQ2FvPz4Oi53Zy/PI7FiBN2sHs87zxvKCYOTJb96TZc1mI2+73lrObG16ztabrkfKhhUm688z19Pn82ne3XaCrdzePhVHpvfLeR1PzP9m7feZ82vz+vjTwvLz9/zzk7eZdaaz57ftdPRiTa2nkeU43pPnzdx2O5CDdvD8tB05pmc5z5vpWmeEFQO3OLdMfe6Zjx0l8NzxWH9pW4X6dvNPu1N/DIekqZjOj/tEfay76/qmOJbHrjxeV8Zjt+DM8447nr+Fbnw+d4prtxK6dXns5J3KZv30xAoL7U/OF0r7j5JcLOzMVa+EvRraVSW0x1IlH76Qga8PmxW2ZOc+9t99fjn84vPH/dvCN+18zYe53HvmcX+AsFvjfwrPvPmbXQtmAAAAAElFTkSuQmCC" alt="">
+            </button>
+          </form>
+          <div class="icon">
+            <img width="300px" src="./Screenshot 2024-06-14 142459.png" alt="">
+          </div>
+          <div class="endNavbar">
+            <p><span class="text-primary">LOGIN</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>REGISTER</span></p>
+            <button><img width="40px" src="data:image/png;base64,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" alt=""></button>
+          </div>
+        </div>
+      </nav>
+
+
+    <!--second Navbar  -->
+    <div class="text-center secondNavbar">
+        <div class="row">
+          <div class="col topbox">
+          </div>
+          <div class="col topbox">
+            <p class="text-primary"><strong>HOME</strong></p>
+          </div>
+          <div class="col topbox">
+            <p><strong>MENS</strong></p>
+          </div>
+          <div class="col topbox">
+            <p><strong>WOMENS</strong></p>
+          </div>
+          <div class="col topbox">
+            <p><strong>ABOUT US</strong></p>
+          </div>
+          <div class="col topbox">
+            <p><strong>CONTACT</strong></p>
+          </div>
+          <div class="col topbox">
+          </div>
+        </div>
+      </div> 
+      <!-- banner -->
+
+      <img id="image1" src="https://pbs.twimg.com/media/GLTyKhsWwAACs0R.jpg:large" alt="" width="100%" id="b1">
+    
+    
+      <div class="banner">
+    <h1 class="hidden"><span style="color: rgb(28, 28, 117);">GNARLY</span> <span style="color: rgb(0, 227, 227);">FISH</span></h1>
+    <h2 class="hidden">IS FISHING,DIVING ,BOATING AND<br>WATER SPORT COMAPNY </h2>
+    <button style="margin-left: 20%;" type="button" class="btn btn-light hidden" id="bt1"> Shop Now ></button>
+    </div>
+
+</div>
+
+<!-- footer -->
+
+
+<footer class="bg-body-tertiary text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase"><u>NAVIGATION</u></h5>
+  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-body">HOME</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">MENS</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">WOMEN</a>
+            </li>
+            <li>
+                <a href="#!" class="text-body">ABOUT</a>
+              </li>
+              <li>
+                <a href="#!" class="text-body">CONTACT US</a>
+              </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0"><u>SOCIAL MEDIA</u></h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-body">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase"><u>HELP</u></h5>
+  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-body">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0"><u>NEWSLETTER</u></h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-body">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+    <!-- Grid container -->
+
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body">2017 GARLEY FISH @ALL RIGHT RESERVED</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+      
+      
+
+</body>
+</html>
