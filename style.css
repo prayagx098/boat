@@ -437,10 +437,10 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -10px; /* Adjust the position of the underline */
+    bottom: -10px; 
     width: 100%;
-    height: 2px; /* Adjust the thickness of the underline */
-    background-color: #c2c1c1; /* Adjust the color of the underline */
+    height: 2px; 
+    background-color: #c2c1c1; 
   }
   
   .icon {
@@ -449,10 +449,10 @@
     top: 33px;
     left: 50%;
     height: 0px;
-    bottom: -16px; /* Adjust the position of the icon */
+    bottom: -16px; 
     transform: translateX(-50%);
-    background-color: #fff; /* Background color to overlap the underline */
-    padding: 0 5px; /* Padding to create some space around the icon */
+    background-color: #fff;
+    padding: 0 5px; 
   }
   
 
