@@ -1,6 +1,19 @@
 *{
     margin: 0%;
     padding: 0%;
+    /* overflow-x: hidden; */
+}
+
+.headingfont{
+    font-family: "Rosarivo", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar{
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
 }
 
 .icon{
@@ -11,18 +24,20 @@
 }
 
 .endNavbar{
+    margin-left: -10px;
     display: flex;
 }
 
 .endNavbar button{
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top: -10px;
     border-radius: 10px;
     border: 0px;
 }
 
 .secondNavbar{
-    width: 1600px;
+    width: 1500px;
+    z-index: 99;
 }
 
 .secondNavbar p{
@@ -30,7 +45,10 @@
 }
 
 .topbox{
-    border: 0.5px solid grey;
+    cursor: pointer;
+    overflow-y: hidden;
+    border: 0.1px solid rgb(221, 221, 221);
+    border-bottom: 0px;
     padding: 10px;
 }
 
@@ -39,7 +57,6 @@
 
 .banner{
     transition: background-color 0.3s, padding 0.3s;
-    width: 50%;
     padding: 50px;
     margin: 20px;
     flex-direction: column;
@@ -47,6 +64,7 @@
     top: 480px;
     left: 50%;
     opacity: 1;
+    cursor: pointer;
     
 }
 
@@ -72,6 +90,392 @@
     height: 800px;
 }
 
+#imageoverlay{
+    position: absolute;
+    z-index: 9999;
+    width: 350px;
+    height: 250px;
+    top: 26%;
+    right: 11%;
+}
+
+
+
+/*box  image  section */
+
+/* .box1{
+    background-color: red;
+    width: 500px;
+    height: 100px;
+    margin-left: 10px;
+} */
+
+
+.cartcontainer {
+  background-color: #ffffff;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 250px 250px;
+  gap: 10px;
+  height: 530px;
+  width: 1400px;
+}
+
+.shopbox1 {
+  background: url(https://connerhats.com/cdn/shop/articles/Screen_Shot_2023-05-12_at_12.06.24_PM.png?v=1683914880&width=1100);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 90px;
+}
+
+.shopbox2 {
+  background: url(https://as1.ftcdn.net/v2/jpg/01/28/71/72/1000_F_128717267_jgaeXM4h8Lsrrbd1sY41rYxWThFaL9Mu.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+
+}
+
+.shopbox3 {
+  background: url(data:image/jpeg;base64,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);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.shopbox4 {
+  background: url(https://as1.ftcdn.net/v2/jpg/03/08/85/72/1000_F_308857288_V0hWj0u4VpgRDPct7M7lUjSRT0RMfVw0.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.shopbox5 {
+  background: url(https://c1.wallpaperflare.com/preview/322/1008/968/woman-female-girl-oar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.shopbox {
+  height: 250px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.shopbox0 {
+    height: 510px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 30px;
+    margin-left: 260px;
+  }
+
+  .shopboxo{
+    height: 250px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    margin-left: -270px;
+  }
+
+  .textbox{
+    margin-left: 10px;
+  }
+
+  .centertext{
+    margin-bottom: 100px;
+  }
+
+  .textbox h1{
+    color: aliceblue;
+    text-shadow: 2px 2px 5px #5e5e5e;
+  }
+
+  .textbox p{
+    font-size: small;
+  }
+
+  .button1 {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   .button1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .button1:hover {
+    color: #fff;
+   }
+   
+   .button1:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .button1:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .button1:active:before {
+    background: #3a0ca3;
+    /* transition: background 0s; */
+   }
+
+/* SHoping cart section */
+
+
+
+.shopping-section {
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 4%;
+    max-width: 1400px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .prev-icon, .next-icon {
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+    padding: 15px;
+    margin: 10px;
+    background-color: #ffffff;
+    color: #777777;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .prev-icon {
+    position: absolute;
+    margin-top: 15%;
+    text-shadow:2px 2px 10px #050038;
+    transition: all 0.3s;
+  }
+
+  .prev-icon:hover{
+    transform: scale(105%);
+    text-shadow:2px 2px 5px #050038;
+  }
+  
+  .next-icon {
+    position: absolute;
+    right: 0px;
+    margin-top:-20% ;
+    text-shadow:2px 2px 10px #050038;
+    transition: all 0.3s;
+  }
+
+  .next-icon:hover{
+    transform: scale(105%);
+    text-shadow:2px 2px 5px #050038;
+  }
+  
+  .products-container {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+  }
+  
+  .product {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    scroll-snap-align: start;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .product:hover {
+    transform: scale(1.01);
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .product:hover img {
+    transform: scale(1.1);
+  }
+  
+  .product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .product .price {
+    font-size: 1.2em;
+    color: #080051;
+    margin: 10px 0;
+  }
+  
+  .product .rating {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .product button {
+    background-color: #080051;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+  }
+  
+  .product button:hover {
+    background-color: #050038;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .prev-icon, .next-icon {
+      font-size: 1.5em;
+      padding: 8px;
+      left: -15px;
+      right: -15px;
+    }
+  
+    .product {
+      flex: 0 0 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product {
+      flex: 0 0 100%;
+    }
+  
+    .shopping-section {
+      padding: 10px;
+    }
+  
+    .prev-icon, .next-icon {
+      font-size: 1.2em;
+      padding: 5px;
+    }
+  }
+
+/* End of shoping cart section */
+
+
+
+/* instagram section */
+.instasec{
+    transition: all 1s;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .custom-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjust the position of the underline */
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #c2c1c1; /* Adjust the color of the underline */
+  }
+  
+  .icon {
+    position: absolute;
+    z-index: 9999;
+    top: 33px;
+    left: 50%;
+    height: 0px;
+    bottom: -16px; /* Adjust the position of the icon */
+    transform: translateX(-50%);
+    background-color: #fff; /* Background color to overlap the underline */
+    padding: 0 5px; /* Padding to create some space around the icon */
+  }
+  
+
+  .instaimages{
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 1500px;
+  }
+
+
+  .instaimages img{
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 0.5px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .instaimages img:hover{
+    box-shadow: 2px 2px 10px black;
+    transform: scale(102%);
+  }
+/* footer section */
+
 footer li a{
     text-decoration: none;
 }
@@ -85,3 +489,7 @@ footer li a{
     width: 250px;
     height: 50px;
 }
+
+
+
+
