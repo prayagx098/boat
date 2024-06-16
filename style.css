@@ -103,15 +103,89 @@
 
 /*box  image  section */
 
-/* .box1{
-    background-color: red;
-    width: 500px;
-    height: 100px;
-    margin-left: 10px;
-} */
 
 
-.cartcontainer {
+.trialbox1 {
+  position: relative;
+  width: 400px;
+  height: 250px; /* Adjust as needed */
+  margin: 10px;
+  background-image: url('https://connerhats.com/cdn/shop/articles/Screen_Shot_2023-05-12_at_12.06.24_PM.png?v=1683914880&width=1100');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.trialbox2 {
+  position: relative;
+  width: 400px;
+  height: 510px; /* Adjust as needed */
+  margin: 10px;
+  background-image: url('https://as1.ftcdn.net/v2/jpg/01/28/71/72/1000_F_128717267_jgaeXM4h8Lsrrbd1sY41rYxWThFaL9Mu.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.trailbox3 {
+  position: relative;
+  width: 400px;
+  height: 250px; /* Adjust as needed */
+  margin: 10px;
+  background: url('https://cdn.pixabay.com/photo/2021/01/30/19/59/fishing-gear-5965175_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.trialbox4 {
+  position: relative;
+  width: 400px;
+  height: 250px; /* Adjust as needed */
+  margin: 10px;
+  background-image: url('https://as1.ftcdn.net/v2/jpg/03/08/85/72/1000_F_308857288_V0hWj0u4VpgRDPct7M7lUjSRT0RMfVw0.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.trialbox5 {
+  position: relative;
+  width: 400px;
+  height: 250px; /* Adjust as needed */
+  margin: 10px;
+  background-image: url('https://c1.wallpaperflare.com/preview/322/1008/968/woman-female-girl-oar.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* .cartcontainer {
   background-color: #ffffff;
   color: #ffffff;
   display: grid;
@@ -163,9 +237,9 @@
   background-repeat: no-repeat;
   grid-column: 3;
   grid-row: 2;
-}
+} */
 
-.shopbox {
+/* .shopbox {
   height: 250px;
   width: 450px;
   display: flex;
@@ -174,9 +248,9 @@
   margin: 10px;
   margin-top: 10px;
   margin-left: 10px;
-}
+} */
 
-.shopbox0 {
+/* .shopbox0 {
     height: 510px;
     width: 350px;
     display: flex;
@@ -195,9 +269,9 @@
     justify-content: center;
     margin: 10px;
     margin-left: -270px;
-  }
+  } */
 
-  .textbox{
+  /* .textbox{
     margin-left: 10px;
   }
 
@@ -212,7 +286,7 @@
 
   .textbox p{
     font-size: small;
-  }
+  } */
 
   .button1 {
     --color: #560bad;
