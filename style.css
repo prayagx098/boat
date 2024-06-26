@@ -23,6 +23,14 @@
 
 }
 
+
+/* @media screen and (max-width:700px) {
+  .icon{
+    width: 50px;
+    height: 10px;
+  }
+} */
+
 .endNavbar{
     margin-left: -10px;
     display: flex;
@@ -40,6 +48,12 @@
     z-index: 99;
 }
 
+
+@media screen and (max-width:600px){
+  .secondNavbar{
+    width: 350px;
+  }
+}
 .secondNavbar p{
     color: grey;
 }
@@ -87,7 +101,7 @@
 }
 
 #image1{
-    height: 800px;
+    max-height: 800px;
 }
 
 #imageoverlay{
@@ -425,6 +439,7 @@
     padding: 0 5px; 
   }
   
+
 
   .instaimages{
     margin-top: 50px;
